@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import HttpResponse, render
+from django.http import HttpResponse
 import tweepy as tw
 import pandas as pd
 
@@ -6,8 +7,16 @@ import pandas as pd
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
-
+    
+    df = twitterlookup("Like_Count",False,50)
+    data=[]
+    for i in range(df.shape[0]):
+        temp=df.loc[i]
+        data.append(dict(temp))
+    context = {'data':data}
+    return render(request,'index.html',context)
+    
+    
 
 def twitterlookup(sortType, order, count):
     consumer_key= 'SUh9Knu3bmN48jJXZfMZZjoA8'
@@ -25,6 +34,8 @@ def twitterlookup(sortType, order, count):
 
     extractedTweets = [[tweet.user.screen_name, tweet.created_at, tweet.text, tweet.favorite_count, tweet.retweet_count, "Only available with the Premium and Enterprise tier products."] for tweet in tweets]
 
-    tweetTable = pd.DataFrame(data=extractedTweets, columns=["User", "Created At", "Tweet Content", "Like Count", "Retweet Count", "Discussion Count"])
-
+    tweetTable = pd.DataFrame(data=extractedTweets, columns=["User", "Created_At", "Tweet_Content", "Like_Count", "Retweet_Count", "Discussion_Count"])
+    
     sortedtweetTable = tweetTable.sort_values(by=[sortType], ascending=order)
+    return sortedtweetTable
+
