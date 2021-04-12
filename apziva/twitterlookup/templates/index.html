@@ -10,8 +10,13 @@
 </head>
 <body>
 
-<div class="container">
-  <h2>Twitter Look Up</h2>
+<div class='container'>
+  <h2 style='text-align:center'>Twitter Look Up</h2>
+  {% comment %} <form action={% url 'home' %} method="POST">
+    {{% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='Submit'>  
+  </form> {% endcomment %}
 <table class="table table-striped">
     <thead style='text-align:center'>
       <tr>

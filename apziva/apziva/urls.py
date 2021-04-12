@@ -19,5 +19,12 @@ from twitterlookup import views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', views.home),
+    path('favorite', views.likeSort),
+    path('retweet', views.retweetSort),
+    path('dis', views.disSort),
+    path('date', views.dataSort),
+    path('all', views.allSort),
+
+
 ]
