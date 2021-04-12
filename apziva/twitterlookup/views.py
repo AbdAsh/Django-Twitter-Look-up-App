@@ -47,7 +47,7 @@ def makeTable(sortType):
     elif sortType == "Created_At":
         df = twitterlookup(["Created_At"],False,100)
     elif sortType == "All":
-        df = twitterlookup(["Retweet_Count","Like_Count","Discussion)Count","Created_At"],False,100)
+        df = twitterlookup(["Retweet_Count","Like_Count","Discussion_Count","Created_At"],False,100)
 
     #This is variable holding a csv if needed
     csv = df.to_csv()
