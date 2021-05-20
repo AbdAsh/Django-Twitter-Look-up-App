@@ -3,10 +3,10 @@ This was my submisson for an interview that required a simple web interface that
 
 You may find the required packaged in the requirements.txt
 
-Screenshots:
+## Screenshots:
 
-Main Page:
+### Main Page:
 ![alt text](https://github.com/AbdAsh/Django-Twitter-Look-up-App/blob/main/screenshots/mainpage.png?raw=true)
-Result Page:
+### Result Page:
 ![alt text](https://github.com/AbdAsh/Django-Twitter-Look-up-App/blob/main/screenshots/sampleresult.png?raw=true)
 
