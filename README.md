@@ -1,10 +1,13 @@
-# sJaVBv0hvI1NGBYv
-Abdelrahman Mahmoud
-This is my submisson for the Apziva for the Twitter lookup Task
+# Django Twitter Look up App
+This was my submisson for an interview that required a simple web interface that can search for tweets with a specific keyword and sort the result using some attribute of the tweets.
 
 
-It is a simple web interface using Django in its core
 You may find the required packaged in the requirements.txt
 
 
- 
+#Screenshots:
+Main Page:
+![alt text](https://github.com/AbdAsh/Django-Twitter-Look-up-App/blob/main/screenshots/mainpage.png?raw=true)
+Result Page:
+![alt text](https://github.com/AbdAsh/Django-Twitter-Look-up-App/blob/main/screenshots/resultpage.png?raw=true)
+
